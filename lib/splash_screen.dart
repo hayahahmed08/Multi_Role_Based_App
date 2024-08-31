@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:multi_role_base_app/Home_Screen.dart'; // Import the HomeScreen widget
 import 'dart:async';
-import 'package:multi_role_base_app/login_screen.dart';// Import dart:async for Timer
+import 'package:multi_role_base_app/login_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';// Import dart:async for Timer
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -10,6 +11,11 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+
+  void islogin()async{
+    SharedPreferences sp =await SharedPreferences.getInstance();
+   bool islogin = sp.getBool('islogin()');
+  }
   void initState() {
     super.initState();
     // Navigate to the home screen after a delay
