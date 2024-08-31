@@ -1,6 +1,7 @@
-// splash_screen.dart
 import 'package:flutter/material.dart';
 import 'package:multi_role_base_app/Home_Screen.dart'; // Import the HomeScreen widget
+import 'dart:async';
+import 'package:multi_role_base_app/login_screen.dart';// Import dart:async for Timer
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,33 +13,23 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Navigate to the home screen after a delay
-    Future.delayed(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => HomeScreen(),
-      ));
+    Timer(Duration(seconds: 6), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => loginScreen()),
+      );
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/splash_image.png'),
-            fit: BoxFit.cover, // This makes the image cover the entire screen
-          ),
-        ),
-        child: Center(
-          child: Text(
-            'Welcome to Multi-Role Base App',
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
+      body: Image(
+        image: NetworkImage(
+            'https://images.pexels.com/photos/6605903/pexels-photo-6605903.jpeg?auto=compress&cs=tinysrgb&w=400'),
+        fit: BoxFit.cover, // This makes the image cover the entire screen
+        height: double.infinity,
+        width: double.infinity,
       ),
     );
   }
