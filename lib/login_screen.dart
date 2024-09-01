@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:multi_role_base_app/Home_Screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class loginScreen extends StatefulWidget {
-  const loginScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<loginScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController ageController = TextEditingController();
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<loginScreen> {
 
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
                   );
                 },
                 child: Container(
@@ -83,3 +83,27 @@ class _LoginScreenState extends State<loginScreen> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
