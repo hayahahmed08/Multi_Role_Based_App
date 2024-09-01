@@ -1,16 +1,11 @@
 # multi_role_based_app
 
 A new Flutter project.
+The App includes the following functionalities 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Navigation Flow: 
+The app starts with the SplashScreen, checks the login status, and then navigates either to the LoginScreen or HomeScreen based on whether the user is already logged in.
+# State Management:
+The app uses StatefulWidget to handle dynamic data and uses SharedPreferences for persistent storage of user data like email, password, age, and login status.
+# User Interaction:
+When a user logs in, their details are stored, and they are navigated to the HomeScreen. If they log out, their data is cleared, and they are returned to the LoginScreen.
