@@ -24,12 +24,12 @@ class _SplashScreenState extends State<SplashScreen> {
       if (isLogin) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) =>  HomeScreen()),
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
         );
       } else {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) =>  LoginScreen()),
+          MaterialPageRoute(builder: (context) => const LoginScreen()),
         );
       }
     });
@@ -48,4 +48,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
